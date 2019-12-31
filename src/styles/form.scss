@@ -1,0 +1,198 @@
+.rsvpForm {
+  margin: 25px 0;
+  width: 100%;
+  max-width: 450px;
+
+  &__label {
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 2px 0;
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+
+  &__group {
+    margin-bottom: 25px;
+  }
+
+  &__validation {
+    display: block;
+    width: 100%;
+    background: $c-red;
+    color: white;
+    padding: 10px;
+    margin-bottom: 25px;
+
+    & p {
+      margin: 0;
+    }
+  }
+}
+
+.underlinedInput {
+  font-size: 25px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #ccc;
+  min-width: 200px;
+  transition: border-color .2s;
+  color: $c-grey;
+  padding: 2px 0;
+
+  &:hover {
+    border-bottom-color: desaturate($c-green, 20);
+  }
+
+  &:focus {
+    border-bottom-color: $c-green;
+  }
+
+  &--small {
+    font-size: 16px;
+  }
+
+  &--padLeft {
+    margin-left: 5px;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--wide {
+    min-width: 350px;
+  }
+}
+
+.underlinedTextArea {
+  font-size: 25px;
+  min-width: 310px;
+  display: block;
+  border: 1px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  outline: none;
+  height: 75px;
+  transition: border-color .2s;
+  color: $c-grey;
+
+  &:focus {
+    border-bottom-color: $c-green;
+  }
+}
+
+
+.nameFields {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  &__fields {
+    margin-right: 5px;
+  }
+}
+
+.checkboxFields {
+  margin-left: 40px;
+  
+  &__fieldGroup {
+
+    input[type=checkbox] {
+      position: absolute;
+      left: -5000px;
+      
+      &:checked + label:before {
+        content: '👍';
+        border-color: $c-green;
+      }  
+    }
+
+    &__label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        border: 2px solid #ccc;
+        width: 23px;
+        height: 23px;
+        padding: 2px;
+        display: inline-block;
+        position: absolute;
+        left: -40px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 14px;
+        transition: border-color .2s;
+      }
+    }
+  }
+}
+
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  
+  &--block {
+    background-color: $c-green;
+    border: none;
+    color: $c-white;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 5px 10px;
+    text-align: left;
+    transition: background-color .2s, padding-left .2s;
+    min-width: 200px;
+    position: relative;
+    outline: none;
+
+
+    &:hover, &:active {
+      background-color: darken($c-green, 10);
+      padding-left: 20px
+    }
+  }
+
+  &--text {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    color: $c-green;
+    font-size: 16px;
+  }
+
+  &--inField {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin: 0 10px;
+    display: inline-flex;
+
+    svg {
+      transition: transform .5s;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+}
+
+.extraPeopleField {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
