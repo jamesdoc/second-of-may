@@ -3,7 +3,6 @@
     action="https://secondofmay.us4.list-manage.com/subscribe/post?u=c335cbaae4eb8bf9dce39b6a6&amp;id=0804ecbe8b"
     method="post"
     class="rsvpForm"
-    target="_blank"
     novalidate>
 
     <div class="rsvpForm__group">
@@ -52,10 +51,12 @@
     <div class="checkboxFields">
 
       <div class="checkboxFields__fieldGroup rsvpForm__group">
-        <input type="checkbox"
-                value="1"
-                name="group[60629][1]"
-                id="mce-group[60629]-60629-0">
+        <input
+          v-model="chkWedding"
+          type="checkbox"
+          value="1"
+          name="group[60629][1]"
+          id="mce-group[60629]-60629-0">
         <label
           for="mce-group[60629]-60629-0"
           class="checkboxFields__fieldGroup__label rsvpForm__label">
@@ -64,10 +65,12 @@
       </div>
 
       <div class="checkboxFields__fieldGroup rsvpForm__group">
-        <input type="checkbox"
-                value="2"
-                name="group[60629][2]"
-                id="mce-group[60629]-60629-1">
+        <input
+          v-model="chkCake"
+          type="checkbox"
+          value="2"
+          name="group[60629][2]"
+          id="mce-group[60629]-60629-1">
         <label
           for="mce-group[60629]-60629-1"
           class="checkboxFields__fieldGroup__label rsvpForm__label">
@@ -87,6 +90,7 @@
               {{ extraPeopleList.length > 0 ? 'We' : 'I' }} will bring
             </label>
             <input
+              v-model="cakeName"
               placeholder="cake name"
               type="text"
               value=""
@@ -98,10 +102,12 @@
       </div>
 
       <div v-if="dinner" class="checkboxFields__fieldGroup rsvpForm__group">
-        <input type="checkbox"
-              value="4"
-              name="group[60629][4]"
-              id="mce-group[60629]-60629-2">
+        <input
+          v-model="chkDinner"
+          type="checkbox"
+          value="4"
+          name="group[60629][4]"
+          id="mce-group[60629]-60629-2">
         <label
           class="checkboxFields__fieldGroup__label rsvpForm__label"
           for="mce-group[60629]-60629-2">
@@ -123,6 +129,7 @@
               {{ extraPeopleList.length > 0 ? 'we' : 'i' }} don't like to eat:
             </label>
             <textarea
+              v-model="allergies"
               type="text"
               value=""
               name="ALLERGIES"
@@ -213,11 +220,16 @@ export default {
       name: '',
       firstName: '',
       lastName: '',
+      extraPeopleList: [],
       email: '',
+      allergies: '',
+      cakeName: '',
+      chkWedding: false,
+      chkCake: false,
+      chkDinner: false,
       dinner: false,
       cakeField: false,
       allergyField: false,
-      extraPeopleList: [],
       validationMessages: [],
     };
   },
@@ -225,10 +237,6 @@ export default {
     addExtraPeople(e) {
       e.preventDefault();
       this.extraPeopleList.push('');
-    },
-    addExtraName(e, i) {
-      console.log(i);
-      console.log(nameSplitter(e.target.value));
     },
     removeName(e, i) {
       e.preventDefault();
@@ -255,11 +263,9 @@ export default {
         this.validationMessages.push('Please check the email address entered');
       }
 
-      if (this.validationMessages.length === 0) {
+      if (this.validationMessages.length > 0) {
         e.preventDefault();
-        console.log('submitting...');
-      } else {
-        e.preventDefault();
+        return false;
       }
 
       return true;

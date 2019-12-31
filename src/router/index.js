@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import About from '../views/About.vue';
 import Rsvp from '../views/Rsvp.vue';
 import Haiku from '../views/Haiku.vue';
 import Gift from '../views/Gift.vue';
@@ -13,11 +12,6 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: About,
   },
   {
     path: '/rsvp',

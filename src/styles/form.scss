@@ -68,7 +68,7 @@
 }
 
 .underlinedTextArea {
-  font-size: 25px;
+  font-size: 16px;
   min-width: 310px;
   display: block;
   border: 1px solid #ccc;
@@ -77,6 +77,7 @@
   height: 75px;
   transition: border-color .2s;
   color: $c-grey;
+  text-transform: uppercase;
 
   &:focus {
     border-bottom-color: $c-green;
@@ -144,6 +145,7 @@
     border: none;
     color: $c-white;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 25px;
     padding: 5px 10px;
     text-align: left;
@@ -151,6 +153,7 @@
     min-width: 200px;
     position: relative;
     outline: none;
+    display: inline-block;
 
 
     &:hover, &:active {
