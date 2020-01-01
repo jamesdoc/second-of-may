@@ -1,5 +1,7 @@
 <template>
-  <div>
-    <h1>This is an gift page</h1>
+  <div class="centralContainer">
+    <div class="gifts">
+      <h1>Nothing to see here...</h1>
+    </div>
   </div>
 </template>
