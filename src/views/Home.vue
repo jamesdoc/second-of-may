@@ -10,7 +10,9 @@
         2nd May 2020
       </div>
 
-      <h2 class="home__subtitle">You're invited</h2>
+      <h2 class="home__subtitle">
+        {{ inviteName ? `${inviteName}, you're` : `You're` }} invited
+      </h2>
 
       <div class="home__location">
         <p>
@@ -39,6 +41,16 @@ import ug from '../assets/ug.svg';
 
 export default {
   name: 'home',
+  created() {
+    if (this.$route.query.name) {
+      this.inviteName = this.$route.query.name;
+    }
+  },
+  data() {
+    return {
+      inviteName: null,
+    };
+  },
   components: {
     ug,
   },
