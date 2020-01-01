@@ -1,0 +1,67 @@
+.centralContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  text-transform: uppercase;
+  font-size: 25px;
+  max-width: 500px;
+}
+
+.home__title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.home__subtitle {
+  font-size: 1.5em;
+  margin: 0 0 1em;
+}
+
+.home__date {
+  display: block;
+  padding: 25px 0;
+  margin: 25px 0;
+  display: table-caption;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background-color: $c-green;
+    position: absolute;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}
+
+.home__location {
+  margin-bottom: 25px;
+
+  &__map {
+    font-size: 16px;
+    color: $c-green;
+    transition: color .2s;
+
+    &:hover {
+      color: darken($c-green, 30);
+    }
+  }
+
+  &__underground {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr 7fr;
+    column-gap: 10px;
+  }
+}

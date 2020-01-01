@@ -4,8 +4,15 @@
 @import 'nav';
 @import 'spine';
 @import 'form';
+@import 'home';
 
-
-
+.underground {
+  text-transform: uppercase;
+  padding: 0 5px;
+  &--northern {
+    background-color: black;
+    color: white;
+  }
+}
 
 
