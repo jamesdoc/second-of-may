@@ -24,11 +24,12 @@
 
   &:before,
   &:after {
-    content: '';
-    width: 25px;
-    height: 4px;
     background-color: $c-green;
+    content: '';
+    height: 4px;
+    left: 0;
     position: absolute;
+    width: 25px;
   }
 
   &:before {

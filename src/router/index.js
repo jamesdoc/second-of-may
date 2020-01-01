@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Rsvp from '../views/Rsvp.vue';
 import Haiku from '../views/Haiku.vue';
 import Gift from '../views/Gift.vue';
+import ThankYou from '../views/ThankYou.vue';
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/gift',
     name: 'gift',
     component: Gift,
+  },
+  {
+    path: '/thankyou',
+    name: 'thankyou',
+    component: ThankYou,
   },
 ];
 
