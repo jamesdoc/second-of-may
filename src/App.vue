@@ -8,7 +8,7 @@
       </hgroup>
 
       <div class="spine__logo">
-        <logo />
+        <!-- <logo /> -->
       </div>
     </header>
 
@@ -25,13 +25,9 @@
 </template>
 
 <script>
-import logo from './assets/jn.svg';
-
 export default {
   name: 'site',
-  components: {
-    logo,
-  },
+  components: {},
 };
 </script>
 

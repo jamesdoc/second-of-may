@@ -1,9 +1,3 @@
-.centralContainer {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
 .home {
   text-transform: uppercase;
   font-size: 25px;
@@ -12,12 +6,13 @@
 
 .home__title {
   font-size: 2em;
+  line-height: 1em;
   margin: 0;
 }
 
 .home__subtitle {
   font-size: 1.5em;
-  margin: 0 0 1em;
+  margin: 0 0 25px;
 }
 
 .home__date {
@@ -48,9 +43,20 @@
 .home__location {
   margin-bottom: 25px;
 
+  &__line {
+    display: flex;
+    align-items: center;
+    line-height: 25px;
+
+    &:nth-child(2){
+      margin-top: 2px;
+    }
+  }
+
   &__map {
+    margin-left: 5px;
     font-size: 16px;
-    color: $c-green;
+    color: lighten($c-green, 20);
     transition: color .2s;
 
     &:hover {
@@ -59,9 +65,19 @@
   }
 
   &__underground {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 4fr 7fr;
-    column-gap: 10px;
+
+    svg {
+      margin-top: 2px;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+
+    .underground {
+      margin-top: 3px;
+      font-size: 16px;
+      padding: 0 5px;
+    }
   }
 }

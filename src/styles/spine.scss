@@ -1,7 +1,7 @@
 .spine {
   background-color: $c-green;
   color: $c-white;
-  width: 100px;
+  width: 50px;
   height: calc(100vh - 10px);
   display: flex;
   flex-direction: column;
@@ -16,16 +16,25 @@
   &:hover {
     background-color: darken($c-green, 5);
   }
+
+  @media (min-width: 500px) {
+    width: 100px;
+  }
 }
 
 .spine__text {
+  display: none;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   padding: 10px;
-  display: flex;
+  
   flex-direction: column;
   width: 100px;
   justify-content: center;
+
+  @media (min-width: 500px) {
+    display: flex;
+  }
 
   h1, h2 {
     font-size: 25px;
@@ -36,15 +45,24 @@
 }
 
 .spine__logo {
+  background: darken($c-green, 10) url('/img/svg/jn.svg');
+  background-size: cover;
   width: 100%;
   text-align: center;
-  background: darken($c-green, 10);
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 500px) {
+    height: 100px;
+  }
 }
 
 .siteContainer {
-  margin-left: 155px;
+  margin-left: 85px;
+  
+  @media (min-width: 500px) {
+    margin-left: 155px;
+  }
 }

@@ -35,12 +35,18 @@
   font-size: 25px;
   text-transform: uppercase;
   outline: none;
+  background: transparent;
   border: none;
   border-bottom: 3px solid #ccc;
   min-width: 200px;
   transition: border-color .2s;
-  color: $c-grey;
+  color: $c-white;
   padding: 2px 0;
+
+  &::placeholder {
+    color: #ccc;
+    font-style: italic;
+  }
 
   &:hover {
     border-bottom-color: desaturate($c-green, 20);
@@ -63,7 +69,8 @@
   }
 
   &--wide {
-    min-width: 350px;
+    width: 100%;
+    max-width: 350px;
   }
 }
 
@@ -86,9 +93,16 @@
 
 
 .nameFields {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+
+  @media (max-width: 574px) {
+    .underlinedInput {width: 100%;}
+  }
+
+  @media (min-width: 575px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
 
   &__fields {
     margin-right: 5px;
@@ -126,6 +140,7 @@
         display: inline-block;
         position: absolute;
         left: -40px;
+        top: 7px;
         cursor: pointer;
         text-align: center;
         font-size: 14px;
@@ -153,7 +168,8 @@
     min-width: 200px;
     position: relative;
     outline: none;
-    display: inline-block;
+    min-height: 50px;
+    display: inline-flex;
 
 
     &:hover, &:active {
@@ -169,7 +185,7 @@
     padding: 0;
     margin: 0;
     text-transform: uppercase;
-    color: $c-green;
+    color: lighten($c-green, 20);
     font-size: 16px;
   }
 

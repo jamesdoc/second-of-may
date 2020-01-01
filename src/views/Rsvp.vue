@@ -1,83 +1,83 @@
 <template>
-  <form
-    action="https://secondofmay.us4.list-manage.com/subscribe/post?u=c335cbaae4eb8bf9dce39b6a6&amp;id=0804ecbe8b"
-    method="post"
-    class="rsvpForm"
-    novalidate>
+  <div class="centralContainer">
+    <form
+      action="https://secondofmay.us4.list-manage.com/subscribe/post?u=c335cbaae4eb8bf9dce39b6a6&amp;id=0804ecbe8b"
+      method="post"
+      class="rsvpForm"
+      novalidate>
 
-    <div class="rsvpForm__group">
+      <div class="rsvpForm__group">
 
-      <div class="nameFields">
-        <div class="nameFields__fields">
-          <input
-            id="primaryName"
-            type="text"
-            class="underlinedInput"
-            v-model="name"
-            placeholder="Full name" />
+        <div class="nameFields">
+          <div class="nameFields__fields">
+            <input
+              id="primaryName"
+              type="text"
+              class="underlinedInput"
+              v-model="name"
+              placeholder="Full name" />
 
-          <transition-group name="slide">
-            <div
-              v-for="(p, i) in extraPeopleList"
-              :key="`p-${i}`"
-              class="extraPeopleField">
-              <input
-                type="text"
-                class="underlinedInput"
-                placeholder="Name"
-                v-model="extraPeopleList[i]" />
+            <transition-group name="slide">
+              <div
+                v-for="(p, i) in extraPeopleList"
+                :key="`p-${i}`"
+                class="extraPeopleField">
+                <input
+                  type="text"
+                  class="underlinedInput"
+                  placeholder="Full name"
+                  v-model="extraPeopleList[i]" />
 
-              <button
-                class="btn btn--inField"
-                aria-label="Remove name"
-                v-on:click="removeName($event, i)">
-                <svg height="16.970563" width="16.970563" xmlns="http://www.w3.org/2000/svg"><path d="m0 2.12132025 2.12132025-2.12132025 6.36396074 6.36396074 6.36396027-6.36396074 2.12132072 2.12132025-6.36396026 6.36396074 6.36396026 6.36396027-2.12132072 2.12132072-6.36396027-6.36396026-6.36396074 6.36396026-2.12131977-2.12132072 6.36396026-6.36396027z" fill="#c8c8c8" fill-rule="evenodd"/></svg>          </button>
-            </div>
-          </transition-group>
+                <button
+                  class="btn btn--inField"
+                  aria-label="Remove name"
+                  v-on:click="removeName($event, i)">
+                  <svg height="16.970563" width="16.970563" xmlns="http://www.w3.org/2000/svg"><path d="m0 2.12132025 2.12132025-2.12132025 6.36396074 6.36396074 6.36396027-6.36396074 2.12132072 2.12132025-6.36396026 6.36396074 6.36396026 6.36396027-2.12132072 2.12132072-6.36396027-6.36396026-6.36396074 6.36396026-2.12131977-2.12132072 6.36396026-6.36396027z" fill="#c8c8c8" fill-rule="evenodd"/></svg>          </button>
+              </div>
+            </transition-group>
+          </div>
+
+          <label for="primaryName" class="rsvpForm__label">
+            {{ extraPeopleList.length > 0 ? 'are' : 'is' }} coming to…
+          </label>
         </div>
 
-        <label for="primaryName" class="rsvpForm__label">
-          {{ extraPeopleList.length > 0 ? 'are' : 'is' }} coming to…
-        </label>
+        <button
+          v-on:click="addExtraPeople($event)"
+          class="btn btn--text">
+          Add another name
+        </button>
       </div>
 
-      <button
-        v-on:click="addExtraPeople($event)"
-        class="btn btn--text">
-        Add another name
-      </button>
-    </div>
+      <div class="checkboxFields">
 
-    <div class="checkboxFields">
+        <div class="checkboxFields__fieldGroup rsvpForm__group">
+          <input
+            v-model="chkWedding"
+            type="checkbox"
+            value="1"
+            name="group[60629][1]"
+            id="mce-group[60629]-60629-0">
+          <label
+            for="mce-group[60629]-60629-0"
+            class="checkboxFields__fieldGroup__label rsvpForm__label">
+            the wedding of James and Nat
+          </label>
+        </div>
 
-      <div class="checkboxFields__fieldGroup rsvpForm__group">
-        <input
-          v-model="chkWedding"
-          type="checkbox"
-          value="1"
-          name="group[60629][1]"
-          id="mce-group[60629]-60629-0">
-        <label
-          for="mce-group[60629]-60629-0"
-          class="checkboxFields__fieldGroup__label rsvpForm__label">
-          the wedding of James and Nat
-        </label>
-      </div>
+        <div class="checkboxFields__fieldGroup rsvpForm__group">
+          <input
+            v-model="chkCake"
+            type="checkbox"
+            value="2"
+            name="group[60629][2]"
+            id="mce-group[60629]-60629-1">
+          <label
+            for="mce-group[60629]-60629-1"
+            class="checkboxFields__fieldGroup__label rsvpForm__label">
+            and {{ extraPeopleList.length > 0 ? 'we' : 'I' }} will stay for cake
+          </label>
 
-      <div class="checkboxFields__fieldGroup rsvpForm__group">
-        <input
-          v-model="chkCake"
-          type="checkbox"
-          value="2"
-          name="group[60629][2]"
-          id="mce-group[60629]-60629-1">
-        <label
-          for="mce-group[60629]-60629-1"
-          class="checkboxFields__fieldGroup__label rsvpForm__label">
-          and {{ extraPeopleList.length > 0 ? 'we' : 'I' }} will stay for cake
-        </label>
-
-        <transition name="slide" mode="in-out">
           <button
             class="btn btn--text"
             v-on:click="toggleCakeField($event)"
@@ -98,23 +98,21 @@
               class="underlinedInput underlinedInput--small"
               id="mce-CAKE">
           </div>
-        </transition>
-      </div>
+        </div>
 
-      <div v-if="dinner" class="checkboxFields__fieldGroup rsvpForm__group">
-        <input
-          v-model="chkDinner"
-          type="checkbox"
-          value="4"
-          name="group[60629][4]"
-          id="mce-group[60629]-60629-2">
-        <label
-          class="checkboxFields__fieldGroup__label rsvpForm__label"
-          for="mce-group[60629]-60629-2">
-          and for dinner in Borough
-        </label>
+        <div v-if="dinner" class="checkboxFields__fieldGroup rsvpForm__group">
+          <input
+            v-model="chkDinner"
+            type="checkbox"
+            value="4"
+            name="group[60629][4]"
+            id="mce-group[60629]-60629-2">
+          <label
+            class="checkboxFields__fieldGroup__label rsvpForm__label"
+            for="mce-group[60629]-60629-2">
+            and for dinner in Borough
+          </label>
 
-        <transition name="slide" mode="out-in">
           <button
             class="btn btn--text"
             v-on:click="toggleAllergiesField($event)"
@@ -122,6 +120,7 @@
             But {{ extraPeopleList.length > 0 ? 'we' : 'I' }} don't like to eat…
           </button>
 
+          <transition name="slide">
           <div class="mc-field-group" v-if="allergyField">
             <label
               class="rsvpForm__label rsvpForm__label--small"
@@ -136,68 +135,69 @@
               class="underlinedTextArea"
               id="mce-ALLERGIES" />
           </div>
-        </transition>
+          </transition>
+        </div>
+
       </div>
 
-    </div>
 
+      <div class="rsvpForm__group">
+        <label
+          for="mce-EMAIL"
+          class="rsvpForm__label">You can contact me by emailing</label>
 
-    <div class="rsvpForm__group">
-      <label
-        for="mce-EMAIL"
-        class="rsvpForm__label">You can contact me by emailing</label>
-
-      <input
-        v-model="email"
-        type="email"
-        value=""
-        name="EMAIL"
-        class="underlinedInput underlinedInput--wide underlinedInput--block"
-        placeholder="email@emailaddress.com"
-        id="mce-EMAIL">
-    </div>
-
-
-    <transition name="slide">
-      <div class="rsvpForm__validation" v-if="validationMessages.length > 0">
-        <p v-for="(p, i) in validationMessages" :key="`v-${i}`">
-          {{ p }}
-        </p>
+        <input
+          v-model="email"
+          type="email"
+          value=""
+          name="EMAIL"
+          class="underlinedInput underlinedInput--wide underlinedInput--block"
+          placeholder="email@emailaddress.com"
+          id="mce-EMAIL">
       </div>
-    </transition>
 
-    <div class="rsvpForm__group">
+
+      <transition name="slide">
+        <div class="rsvpForm__validation" v-if="validationMessages.length > 0">
+          <p v-for="(p, i) in validationMessages" :key="`v-${i}`">
+            {{ p }}
+          </p>
+        </div>
+      </transition>
+
+      <div class="rsvpForm__group">
+        <input
+          class="btn btn--block"
+          type="submit"
+          value="Submit"
+          name="subscribe"
+          v-on:click="formSubmit($event)">
+      </div>
+
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text"
+                name="b_c335cbaae4eb8bf9dce39b6a6_0804ecbe8b"
+                tabindex="-1"
+                value="">
+      </div>
       <input
-        class="btn btn--block"
-        type="submit"
-        value="Submit"
-        name="subscribe"
-        v-on:click="formSubmit($event)">
-    </div>
+        v-model="firstName"
+        type="hidden"
+        name="FNAME"
+        id="mce-FNAME">
+      <input
+        v-model="lastName"
+        type="hidden"
+        name="LNAME"
+        id="mce-LNAME">
+      <input
+        type="hidden"
+        v-model="extraPeopleList"
+        name="MOREPEOPLE"
+        id="mce-MOREPEOPLE" />
 
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text"
-              name="b_c335cbaae4eb8bf9dce39b6a6_0804ecbe8b"
-              tabindex="-1"
-              value="">
-    </div>
-    <input
-      v-model="firstName"
-      type="hidden"
-      name="FNAME"
-      id="mce-FNAME">
-    <input
-      v-model="lastName"
-      type="hidden"
-      name="LNAME"
-      id="mce-LNAME">
-    <input
-      type="hidden"
-      v-model="extraPeopleList"
-      name="MOREPEOPLE"
-      id="mce-MOREPEOPLE" />
-
-  </form>
+    </form>
+  </div>
 </template>
 
 <script>

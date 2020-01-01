@@ -5,11 +5,16 @@
   
   a {
     font-weight: bold;
-    color: $c-grey;
+    color: lighten($c-green, 20);
     text-transform: uppercase;
+    transition: color .2s;
+
+    &:hover {
+      color: $c-green;
+    }
 
     &.router-link-exact-active {
-      color: $c-green;
+      color: $c-grey;
     }
   }
 }

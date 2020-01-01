@@ -6,6 +6,22 @@
 @import 'form';
 @import 'home';
 
+body {
+  background-image: url('/img/brown-paper.jpg');
+  background-position: center center;
+}
+
+.centralContainer {
+  margin: 85px 0 10px;
+
+  @media (min-height: 650px) {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto 10px auto 0;
+  }
+}
+
 .underground {
   text-transform: uppercase;
   padding: 0 5px;
