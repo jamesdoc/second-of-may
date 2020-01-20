@@ -15,7 +15,6 @@
     <div class="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/gift">Gifts</router-link> |
-      <router-link to="/haiku">Haiku</router-link> |
       <router-link to="/rsvp">Tell us you're coming</router-link>
     </div>
     <transition name="fade" mode="out-in">

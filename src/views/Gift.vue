@@ -5,9 +5,9 @@
       <p>Some people like to give presents… others like words. Take your pick:</p>
 
       <h2>Words</h2>
-      <p>A haiku is a short form poem, made of three sentances…</p>
-      <p>Sentance one and three have five syllables, sentance two has seven syllables.</p>
-      <p><a href="https://en.wikipedia.org/wiki/Haiku" target="_blank">Read the rules</a> and have fun.</p>
+      <p>Nat loves word; write us a letter,
+        craft a <router-link to="/haiku">haiku</router-link>, or
+        send us a card.</p>
 
       <h2>Time</h2>
       <p>Come and join us on the Second of May 2020.</p>
