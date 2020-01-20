@@ -13,6 +13,7 @@ body {
 
 .centralContainer {
   margin: 85px 0 10px;
+  max-width: 450px;
 
   @media (min-height: 650px) {
     height: 100vh;

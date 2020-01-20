@@ -1,8 +1,22 @@
 <template>
   <div class="centralContainer">
     <div class="about">
-      <h1>This is a haiku page</h1>
-      <p>Some people show love with gifts, others by words.</p>
+      <h1>Some people give gifts… other give words…</h1>
+
+      <p>A haiku is a short form poem, made of three sentances…</p>
+      <p>Sentance one and three have five syllables, sentance two has seven syllables.</p>
+
+      <ol>
+        <li>
+          The essence of haiku is "cutting" (kiru). This is often represented by the
+          juxtaposition of two images or ideas and a kireji ("cutting word") between
+          them, a kind of verbal punctuation mark which signals the moment of separation
+          and colours the manner in which the juxtaposed elements are related.</li>
+        <li>
+          Traditional haiku often consist of 17 on (also known as morae though often
+          loosely translated as "syllables"), in three phrases of 5, 7, and 5 on,
+          respectively.</li>
+      </ol>
       <p>Read more <a href="https://en.wikipedia.org/wiki/Haiku" target="_blank" rel="noopener">about haiku</a>.</p>
     </div>
   </div>
