@@ -37,9 +37,9 @@
             </transition-group>
           </div>
 
-          <label for="primaryName" class="rsvpForm__label">
+          <!-- <label for="primaryName" class="rsvpForm__label">
             {{ extraPeopleList.length > 0 ? 'are' : 'is' }} coming to…
-          </label>
+          </label> -->
         </div>
 
         <button
@@ -61,11 +61,29 @@
           <label
             for="mce-group[60629]-60629-0"
             class="checkboxFields__fieldGroup__label rsvpForm__label">
-            the wedding of James and Nat
+            can come…
           </label>
         </div>
 
-        <div class="checkboxFields__fieldGroup rsvpForm__group">
+        <div v-if="chkWedding == 0" class="checkboxFields__fieldGroup rsvpForm__group">
+          <input
+            v-model="chkNope"
+            type="checkbox"
+            value="0"
+            name="nope"
+            id="nope">
+          <label
+            for="nope"
+            class="checkboxFields__fieldGroup__label rsvpForm__label">
+            cannot come to the wedding
+          </label>
+        </div>
+      </div>
+
+      <div class="checkboxFields">
+        <div
+          class="checkboxFields__fieldGroup rsvpForm__group"
+          v-if="chkWedding == 1">
           <input
             v-model="chkCake"
             type="checkbox"
@@ -100,7 +118,7 @@
           </div>
         </div>
 
-        <div v-if="dinner" class="checkboxFields__fieldGroup rsvpForm__group">
+        <div v-if="dinner && chkWedding == 1" class="checkboxFields__fieldGroup rsvpForm__group">
           <input
             v-model="chkDinner"
             type="checkbox"
