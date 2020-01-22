@@ -155,6 +155,7 @@
 .btn {
   cursor: pointer;
   outline: none;
+  appearance: none;
   
   &--block {
     background-color: $c-green;
