@@ -11,7 +11,7 @@
       </div>
 
       <h2 class="home__subtitle">
-        {{ inviteName ? `${inviteName}, you're` : `You're` }} invited
+        {{ inviteName ? `${inviteName}, you're` : `You're` }}&nbsp;invited
       </h2>
 
       <div class="home__location">
