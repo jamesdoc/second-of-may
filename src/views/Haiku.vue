@@ -3,8 +3,8 @@
     <div class="about">
       <h1>Some people give gifts… other give words…</h1>
 
-      <p>A haiku is a short form poem, made of three sentances…</p>
-      <p>Sentance one and three have five syllables, sentance two has seven syllables.</p>
+      <p>A haiku is a short form poem, made of three sentences…</p>
+      <p>Sentance one and three have five syllables, sentence two has seven syllables.</p>
 
       <ol>
         <li>
