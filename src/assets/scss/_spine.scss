@@ -45,8 +45,8 @@
 }
 
 .spine__logo {
-  background: darken($c-green, 10) url('/img/svg/jn.svg');
-  background-size: cover;
+  background: darken($c-green, 10) url('/assets/svg/jn.svg') no-repeat center;
+  background-size: 80%;
   width: 100%;
   text-align: center;
   height: 50px;

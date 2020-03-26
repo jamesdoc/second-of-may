@@ -1,13 +1,12 @@
 @import 'color';
 @import 'restart';
-@import 'animations';
 @import 'nav';
 @import 'spine';
 @import 'form';
 @import 'home';
 
 body {
-  background-image: url('/img/brown-paper.jpg');
+  background-image: url('/assets/img/brown-paper.jpg');
   background-position: center center;
 }
 
@@ -16,10 +15,11 @@ body {
   max-width: 450px;
 
   @media (min-height: 650px) {
-    height: 100vh;
-    display: flex;
     align-items: center;
+    display: flex;
     margin: auto 10px auto 0;
+    min-height: 100vh;
+    padding-bottom: 10px;
   }
 }
 

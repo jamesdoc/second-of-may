@@ -4,6 +4,7 @@
   max-width: 450px;
 
   &__label {
+    cursor: pointer;
     font-size: 25px;
     text-transform: uppercase;
     padding: 2px 0;
@@ -176,6 +177,7 @@
 
     &:hover, &:active {
       background-color: darken($c-green, 10);
+      color: $c-white;
       padding-left: 20px
     }
   }

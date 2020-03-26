@@ -1,0 +1,19 @@
+---
+layout: default
+eleventyExcludeFromCollections: true
+---
+
+<div>
+  <h1>News and Updates</h1>
+
+  <ul>
+  {% for update in collections.updates | reverse  %}
+    <li>
+      <a href="{{ update.url }}">
+        <h2>{{ update.data.title }}</h2>
+      </a>
+      {% if update.data.date %}<date>{{ update.data.date | readableDate }}</date>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
