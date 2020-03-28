@@ -1,0 +1,9 @@
+                            
+/* Human */
+James Doc
+jamesdoc.com
+@jamesdoc
+London, UK
+
+/* Site */
+Built on top of 11ty: 11ty.dev
