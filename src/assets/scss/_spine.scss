@@ -45,17 +45,18 @@
 }
 
 .spine__logo {
-  background: darken($c-green, 10) url('/assets/svg/jn.svg') no-repeat center;
-  background-size: 80%;
-  width: 100%;
-  text-align: center;
-  height: 50px;
-  display: flex;
   align-items: center;
+  background: darken($c-green, 10);
+  display: flex;
+  height: 50px;
   justify-content: center;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
 
   @media (min-width: 500px) {
     height: 100px;
+    padding: 10px;
   }
 }
 
