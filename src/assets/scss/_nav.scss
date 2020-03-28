@@ -1,7 +1,14 @@
 .nav {
-  position: absolute;
-  top: 0;
-  right: 5px;
+  
+  @media (min-width: 740px) {    
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+  
+  @media (min-width: 890px) {    
+    position: fixed;
+  }
   
   a {
     font-weight: bold;
