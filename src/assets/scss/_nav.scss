@@ -1,14 +1,17 @@
 .nav {
   height: 25px; 
 
-  @media (min-width: 740px) {    
-    position: absolute;
-    top: 0;
-    right: 5px;
-  }
-  
-  @media (min-width: 890px) {    
+  @media (min-width: 890px) { 
+    border-left: 1px solid $c-green;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    padding: 0 10px;
     position: fixed;
+    right: 0; 
+    text-align: right;
+    top: 0;  
   }
   
   a {
@@ -16,6 +19,7 @@
     color: #ffffff;
     text-transform: uppercase;
     transition: color .2s;
+    padding: 0 10px 0 0;
 
     &:hover {
       color: lighten($c-green, 20);
