@@ -162,17 +162,17 @@
     background-color: $c-green;
     border: none;
     color: $c-white;
-    text-transform: uppercase;
-    text-decoration: none;
+    display: flex;
     font-size: 25px;
-    padding: 5px 10px;
-    text-align: left;
-    transition: background-color .2s, padding-left .2s;
-    min-width: 200px;
-    position: relative;
-    outline: none;
     min-height: 50px;
-    display: inline-flex;
+    min-width: 200px;
+    outline: none;
+    padding: 5px 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .2s, padding-left .2s;
 
 
     &:hover, &:active {

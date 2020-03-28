@@ -27,6 +27,9 @@ eleventyExcludeFromCollections: true
     <a href="/loop" class="btn btn--block" aria-label="Let us know you're coming">
       Stay in the Loop
     </a>
+
+    {% set latestUpdate = collections.updates | last %}
+    <a href="{{ latestUpdate.url }}" class="btn btn--text">Latest update</a>
   </div>
 
 </div>
