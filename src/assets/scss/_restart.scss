@@ -1,3 +1,18 @@
+/* oswald-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/oswald/oswald-v31-latin-regular.eot');
+  src: local(''),
+       url('/assets/fonts/oswald/oswald-v31-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/oswald/oswald-v31-latin-regular.woff2') format('woff2'), 
+       url('/assets/fonts/oswald/oswald-v31-latin-regular.woff') format('woff'),
+       url('/assets/fonts/oswald/oswald-v31-latin-regular.ttf') format('truetype'),
+       url('/assets/fonts/oswald/oswald-v31-latin-regular.svg#Oswald') format('svg');
+}
+
 * {
   box-sizing: border-box;
 }

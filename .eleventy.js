@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig){
   // Assets pass-through
   eleventyConfig.addPassthroughCopy("src/assets/icons");
   eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/svg");
   eleventyConfig.addPassthroughCopy({ "src/assets/static": "/" });
 
