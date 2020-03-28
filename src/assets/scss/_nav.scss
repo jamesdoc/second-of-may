@@ -15,11 +15,12 @@
   }
   
   a {
-    font-weight: bold;
     color: #ffffff;
+    font-weight: bold;
+    padding: 0 10px 0 0;
     text-transform: uppercase;
     transition: color .2s;
-    padding: 0 10px 0 0;
+    white-space: nowrap;
 
     &:hover {
       color: lighten($c-green, 20);
