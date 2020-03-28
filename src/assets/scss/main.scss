@@ -6,8 +6,16 @@
 @import 'home';
 
 body {
-  background-image: url('/assets/img/brown-paper.jpg');
   background-position: center center;
+}
+
+body.no-js,
+.no-webp body {
+  background-image: url('/assets/img/brown-paper.jpg');
+}
+
+.webp body {
+  background-image: url('/assets/img/brown-paper.webp');
 }
 
 .centralContainer {
