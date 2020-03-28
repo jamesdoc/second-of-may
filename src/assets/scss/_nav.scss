@@ -1,6 +1,6 @@
 .nav {
   height: 25px; 
-  
+
   @media (min-width: 740px) {    
     position: absolute;
     top: 0;
@@ -13,16 +13,12 @@
   
   a {
     font-weight: bold;
-    color: lighten($c-green, 20);
+    color: #ffffff;
     text-transform: uppercase;
     transition: color .2s;
 
     &:hover {
-      color: $c-green;
-    }
-
-    &.router-link-exact-active {
-      color: $c-grey;
+      color: lighten($c-green, 20);
     }
   }
 }

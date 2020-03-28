@@ -36,10 +36,10 @@ p {
 }
 
 a {
-  color: lighten($c-green, 20);
+  color: #ffffff;
   transition: color .2s;
 
   &:hover {
-    color: $c-green;
+    color: lighten($c-green, 20);
   }
 }
