@@ -23,8 +23,21 @@ body.no-js,
   background-image: url('/assets/img/brown-paper.webp');
 }
 
+.siteContainer {
+  margin-left: 70px;
+  
+  @media (min-width: 500px) {
+    margin-left: 125px;
+  }
+
+  @media (min-width: 640px) {
+    margin-left: 150px;
+  }
+}
+
+
 .centralContainer {
-  margin: 85px 0 10px;
+  margin: 85px 10px 10px 0;
   max-width: 450px;
 
   @media (min-height: 650px) {
