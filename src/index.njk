@@ -29,7 +29,7 @@ eleventyExcludeFromCollections: true
     </a>
 
     {% set latestUpdate = collections.updates | last %}
-    <a href="{{ latestUpdate.url }}" class="btn btn--text">Latest update</a>
+    <a href="{{ latestUpdate.url }}" class="btn btn--text">Latest update: {{ latestUpdate.data.title }}</a>
   </div>
 
 </div>
